@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
 
 {% seo %}
+    <link rel="stylesheet" href="{{ '/assets/css/heart.css?v=' | append: site.github.build_revision | relative_url }}">
 
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
     <meta name="viewport" content="width=device-width">
@@ -36,14 +37,12 @@
         <h3>Online Profiles:</h3>
       </header>
       <section>
-        where is it
       {{ content }}
 
       </section>
       <footer>
-          footter yo
         {% if site.github.is_project_page %}
-        <p>This project is maintained with love by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a></p>
+        <div class='smallfont'>This website is made with <p id="heart"></p> by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a></div>
         {% endif %}
         <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
       </footer>

@@ -2,7 +2,29 @@
 layout: default
 ---
 
+<div>
+    <h2>Skills:</h2>
+
+</div>
+
+<div>
+    <h2>Experience:</h2>
+
+</div>
+
+<div>
+    <h2>Education:</h2>
+
+</div>
+
+
+<div>
+    <h2>Awards:</h2>
+
+</div>
 Text can be **bold**, _italic_, or ~~strikethrough~~.
+
+[Researches I did](researches).
 
 [Link to another page](another-page).
 
