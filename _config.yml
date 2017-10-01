@@ -3,3 +3,6 @@ description: My adventures on a beautiful planet floating in space.
 show_downloads: true
 google_analytics:
 theme: jekyll-theme-minimal
+baseurl: /
+
+exclude: ['README.md']
