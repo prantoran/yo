@@ -216,7 +216,7 @@ footer { width: 270px; float: left; position: fixed; bottom: 50px; -webkit-font-
 
 .xsmallfont { font-size: 0.7em; }
 
-.avatar { height: 80%; width: 80%; }
+.avatar { height: 80%; width: 80%; border-radius: 2%; }
 
 .rowheading { color: Coral; }
 
