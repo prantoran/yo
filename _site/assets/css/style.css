@@ -227,3 +227,7 @@ footer { width: 270px; float: left; position: fixed; bottom: 50px; -webkit-font-
 .paratitle { font-weight: bold; display: inline; }
 
 .customhyperlink { color: Coral; }
+
+.noborder { border-bottom: 0px; }
+
+.block { display: block; }

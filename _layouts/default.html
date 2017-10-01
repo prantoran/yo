@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="{{ '/assets/css/heart.css?v=' | append: site.github.build_revision | relative_url }}">
 
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/font-awesome.min.css?v=' | append: site.github.build_revision | relative_url }}">
+
     <meta name="viewport" content="width=device-width">
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -20,22 +22,70 @@
         <h1>{{ site.title | default: site.github.repository_name }}</h1>
         <p>{{ site.description | default: site.github.project_tagline }}</p>
 
-        {% if site.github.is_project_page %}
+        <!-- {% if site.github.is_project_page %}
           <p class="view"><a href="{{ site.github.repository_url }}">View the Project on GitHub <small>{{ github_name }}</small></a></p>
-        {% endif %}
+        {% endif %} -->
 
         {% if site.github.is_user_page %}
           <p class="view"><a href="{{ site.github.owner_url }}">View My GitHub Profile</a></p>
         {% endif %}
 
-        {% if site.show_downloads %}
+        <!-- {% if site.show_downloads %}
           <ul>
             <li><a href="{{ site.github.zip_url }}">Download <strong>ZIP File</strong></a></li>
             <li><a href="{{ site.github.tar_url }}">Download <strong>TAR Ball</strong></a></li>
             <li><a href="{{ site.github.repository_url }}">View On <strong>GitHub</strong></a></li>
           </ul>
-        {% endif %}
+        {% endif %} -->
         <h3>Online Profiles:</h3>
+        <table>
+            {% if site.github_username %}
+            <ul style='width:60%'>
+                <li style='width:95%'>
+                    <a href="https://github.com/{{ site.github_username }}">
+                        <i class="fa fa-github"></i> GitHub
+                    </a>
+                </li>
+            </ul>
+            {% endif %}
+            {% if site.linkedin_username %}
+            <ul style='width:60%'>
+                <li style='width:95%'>
+                    <a href="https://linkedin.com/in/{{ site.linkedin_username }}">
+                        <i class="fa fa-linkedin"></i> LinkedIn
+                    </a>
+                </li>
+            </ul>
+            {% endif %}
+            {% if site.google_scholar_citation_username %}
+            <ul style='width:60%'>
+                <li style='width:95%'>
+                    <a href="https://scholar.google.com/citations?user={{ site.google_scholar_citation_username }}">
+                        <i class="fa fa-google-plus"></i> Google Scholar Citations
+                    </a>
+                </li>
+            </ul>
+            {% endif %}
+            {% if site.google_plus_username %}
+            <ul style='width:60%'>
+                <li style='width:95%'>
+                    <a href="https://plus.google.com/{{ site.google_plus_username }}">
+                        <i class="fa fa-google-plus"></i> Google+
+                    </a>
+                </li>
+            </ul>
+            {% endif %}
+            {% if site.facebook_username %}
+            <ul style='width:60%'>
+                <li style='width:95%'>
+                    <a href="https://www.facebook.com/{{ site.facebook_username }}">
+                        <i class="fa fa-facebook"></i> Facebook
+                    </a>
+                </li>
+            </ul>
+            {% endif %}
+
+        </table>
       </header>
       <section>
       {{ content }}
