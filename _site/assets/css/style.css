@@ -150,7 +150,7 @@ a small { font-size: 11px; color: #777; margin-top: -0.3em; display: block; }
 
 a:hover small { color: #777; }
 
-.wrapper { width: 85%; margin: 0 auto; }
+.wrapper { width: 80%; margin: 0 auto; }
 
 blockquote { border-left: 1px solid #e5e5e5; margin: 0; padding: 0 0 0 20px; font-style: italic; }
 
@@ -190,7 +190,7 @@ header ul li + li + li { border-right: none; width: 89px; }
 
 header ul a strong { font-size: 14px; display: block; color: #222; }
 
-section { width: 71%; float: right; padding-bottom: 50px; }
+section { width: 69%; float: right; padding-bottom: 50px; }
 
 small { font-size: 11px; }
 
@@ -235,8 +235,6 @@ footer { width: 270px; float: left; position: fixed; bottom: 50px; -webkit-font-
 .lowmarginbottom { margin-bottom: -2%; }
 
 .lowmargintop { margin-top: -2%; }
-
-.avatar-lowmargintop { margin-top: -7%; }
 
 .footer-lowmarginbottom { margin-bottom: -1%; }
 

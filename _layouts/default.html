@@ -20,7 +20,7 @@
   <body class='scrollbar' id='style-1'>
     <div class="wrapper">
       <header>
-        <img class='avatar avatar-lowmargintop' src="{{ '/assets/image/avatar.jpg?v=' | append: site.github.build_revision | relative_url }}" />
+        <img class='avatar' src="{{ '/assets/image/avatar.jpg?v=' | append: site.github.build_revision | relative_url }}" />
         <!-- <h1>{{ site.title | default: site.github.repository_name }}</h1> -->
         <h1><a>P</a>inku Deb Nath</h1>
         <p class='lowmargintop'>{{ site.description | default: site.github.project_tagline }}</p>
@@ -101,6 +101,6 @@
             ga('send', 'pageview');
         </script>
     {% endif %}
-    <img class='bird-graffiti' src="{{ '/assets/image/bdb.png' }}"
+    <img class='bird-graffiti' src="{{ '/assets/image/bdb.png?v='| append: site.github.build_revision | relative_url }}"
   </body>
 </html>
