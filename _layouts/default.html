@@ -20,10 +20,10 @@
   <body class='scrollbar' id='style-1'>
     <div class="wrapper">
       <header>
-        <img class='avatar' src="{{ '/assets/image/avatar.jpg?v=' | append: site.github.build_revision | relative_url }}" />
+        <img class='avatar avatar-lowmargintop' src="{{ '/assets/image/avatar.jpg?v=' | append: site.github.build_revision | relative_url }}" />
         <!-- <h1>{{ site.title | default: site.github.repository_name }}</h1> -->
         <h1><a>P</a>inku Deb Nath</h1>
-        <p>{{ site.description | default: site.github.project_tagline }}</p>
+        <p class='lowmargintop'>{{ site.description | default: site.github.project_tagline }}</p>
 
         <!-- {% if site.github.is_project_page %}
           <p class="view"><a href="{{ site.github.repository_url }}">View the Project on GitHub <small>{{ github_name }}</small></a></p>
@@ -34,10 +34,10 @@
         {% endif %}
 
         {% if site.email %}
-            <p class='boldfont'>
+            <p class='boldfont lowmargintop lowmarginbottom'>
                 Email:
-            </p>
-            <p >
+            </p >
+            <p class='lowmarginbottom'>
                 {{site.email}}
             </p>
             <p>
@@ -52,60 +52,36 @@
           </ul>
         {% endif %} -->
         <p class='boldfont'>Online Profiles:</p>
-        <table>
+        <ul class='profile-container'>
             {% if site.github_username %}
-            <ul style='width:60%'>
-                <li style='width:95%'>
-                    <a href="https://github.com/{{ site.github_username }}">
-                        <i class="fa fa-github"></i> GitHub
-                    </a>
-                </li>
-            </ul>
+            <li >
+                <a class='profile-font' href="https://github.com/{{ site.github_username }}">
+                            <i class="fa fa-github"></i> GitHub         
+                </a>
+            </li>
             {% endif %}
             {% if site.linkedin_username %}
-            <ul style='width:60%'>
-                <li style='width:95%'>
-                    <a href="https://linkedin.com/in/{{ site.linkedin_username }}">
-                        <i class="fa fa-linkedin"></i> LinkedIn
-                    </a>
-                </li>
-            </ul>
+            <li >
+                <a class='profile-font' href="https://linkedin.com/in/{{ site.linkedin_username }}">
+                    <i class="fa fa-linkedin"></i> LinkedIn
+                </a>
+            </li>
             {% endif %}
             {% if site.google_scholar_citation_username %}
-            <ul style='width:60%'>
-                <li style='width:95%'>
-                    <a href="https://scholar.google.com/citations?user={{ site.google_scholar_citation_username }}">
-                        <i class="fa fa-google-plus"></i> Google Scholar Citations
-                    </a>
-                </li>
-            </ul>
-            <!-- {% endif %}
-            {% if site.google_plus_username %}
-            <ul style='width:60%'>
-                <li style='width:95%'>
-                    <a href="https://plus.google.com/{{ site.google_plus_username }}">
-                        <i class="fa fa-google-plus"></i> Google+
-                    </a>
-                </li>
-            </ul>
+            <li >
+                <a class='profile-font' href="https://scholar.google.com/citations?user={{ site.google_scholar_citation_username }}">
+                    <i class="fa fa-google-plus"></i> Google Scholar
+                </a>
+            </li>
             {% endif %}
-            {% if site.facebook_username %}
-            <ul style='width:60%'>
-                <li style='width:95%'>
-                    <a href="https://www.facebook.com/{{ site.facebook_username }}">
-                        <i class="fa fa-facebook"></i> Facebook
-                    </a>
-                </li>
-            </ul>
-            {% endif %} -->
-
-        </table>
+        </ul>
+            
       </header>
       <section >
       {{ content }}
 
       </section>
-      <footer>
+      <footer class='footer-lowmarginbottom'>
         {% if site.github.is_project_page %}
         <div class='smallfont'>This website is made with <p id="heart"></p> by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a></div>
         {% endif %}
@@ -113,7 +89,6 @@
       </footer>
     </div>
     <script src="{{ '/assets/js/scale.fix.js' | relative_url }}"></script>
-
 
   {% if site.google_analytics %}
     <script>
