@@ -244,6 +244,9 @@ footer { width: 270px; float: left; position: fixed; bottom: 50px; -webkit-font-
 
 .bird-graffiti:hover { height: 12%; width: 6%; }
 
-.spaceman-graffiti { padding: 1% 0 0 1%; height: 10%; width: 5%; position: fixed; right: 3%; bottom: 6%; }
+.spaceman-graffiti { padding: 1% 0 0 1%; height: 10%; width: 5%; position: fixed; right: 3%; bottom: 6%; background-size: 100% 100%; animation: myAnimation 10s linear infinite; }
 
-.spaceman-graffiti:hover { height: 12%; width: 6%; }
+@keyframes myAnimation { 0% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; } }
+.spaceman-graffiti:hover { height: 14%; width: 7%; }

@@ -3,6 +3,13 @@
 @import "{{ site.theme }}";
 // credit: Nicolas Gallagher
 
+@keyframes HeartAnimation {
+    0% {background: red;}
+    50% {background: purple;}
+    100% {background: red;}
+
+}
+
 #heart {
     top:0.3em;
     position: relative;
@@ -10,6 +17,7 @@
     display:inline;
     width: 1em;
     height: 0.9em;
+    
 }
 #heart:before,
 #heart:after {
@@ -32,6 +40,9 @@
         -ms-transform-origin: 0 100%;
          -o-transform-origin: 0 100%;
             transform-origin: 0 100%;
+
+    background-size: 100% 100%;
+    animation: HeartAnimation 3s linear infinite;
 }
 #heart:after {
     left: 0;
