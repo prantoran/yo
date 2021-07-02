@@ -1,12 +1,289 @@
-<!DOCTYPE html>
-<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Timeline</title>
+	<script src="//unpkg.com/timelines-chart@2"></script>
+	<script>
+        function getData() {
+            const groups = [
+                {
+                    name:"Study 1",
+                    labels: [
+                        {
+                            name: "Designing",
+                            segments: [
+                                {
+                                    start: new Date(2021, 6, 1),
+                                    end: new Date(2021, 6, 2),
+                                    val: "Factors Combinations",
+                                },
+                                {
+                                    start: new Date(2021, 6, 3),
+                                    end: new Date(2021, 6, 4),
+                                    val: "Feedback and Update",
+                                },
+                            ],
+                        },
+                        {
+                            name: "Running",
+                            segments: [
+                                {
+                                    start: new Date(2021, 6, 2),
+                                    end: new Date(2021, 6, 3),
+                                    val: "Beta Testing",
+                                },
+                                {
+                                    start: new Date(2021, 6, 4),
+                                    end: new Date(2021, 6, 10),
+                                    val: "Run",
+                                },
+                                
+                            ],
+                        },
+                        {
+                            name: "Data Analysis",
+                            segments: [
+                                {
+                                    start: new Date(2021, 6, 4),
+                                    end: new Date(2021, 6, 10),
+                                    val: "Verify Recorded Data",
+                                },
+                                {
+                                    start: new Date(2021, 6, 10),
+                                    end: new Date(2021, 6, 13),
+                                    val: "Statistical Analysis",
+                                }
+                            ],
+                        },
+                    ],
+                },
+                {
+                    name:"Study 2",
+                    labels: [
+                    {
+                            name: "Designing",
+                            segments: [
+                                {
+                                    start: new Date(2021, 6, 11),
+                                    end: new Date(2021, 6, 14),
+                                    val: "Determine Factors",
+                                },
+                                {
+                                    start: new Date(2021, 6, 14),
+                                    end: new Date(2021, 6, 16),
+                                    val: "Update Prototype",
+                                },
+                                {
+                                    start: new Date(2021, 6, 16),
+                                    end: new Date(2021, 6, 17),
+                                    val: "Revise Factors",
+                                },
+                                {
+                                    start: new Date(2021, 6, 17),
+                                    end: new Date(2021, 6, 18),
+                                    val: "Factors Combinations",
+                                },
+                                {
+                                    start: new Date(2021, 6, 18),
+                                    end: new Date(2021, 6, 20),
+                                    val: "Update Prototype",
+                                },
+                            ],
+                        },
+                        {
+                            name: "Running",
+                            segments: [
+                                {
+                                    start: new Date(2021, 6, 12),
+                                    end: new Date(2021, 6, 17),
+                                    val: "Alpha Testing",
+                                },
+                                {
+                                    start: new Date(2021, 6, 18),
+                                    end: new Date(2021, 6, 21),
+                                    val: "Beta Testing",
+                                },
+                                {
+                                    start: new Date(2021, 6, 21),
+                                    end: new Date(2021, 6, 28),
+                                    val: "Run",
+                                },
+                            ],
+                        },
+                        {
+                            name: "Data Analysis",
+                            segments: [
+                                {
+                                    start: new Date(2021, 6, 21),
+                                    end: new Date(2021, 6, 28),
+                                    val: "Verify Recorded Data",
+                                },
+                                {
+                                    start: new Date(2021, 6, 28),
+                                    end: new Date(2021, 7, 1),
+                                    val: "Statistical Analysis",
+                                }
+                            ],
+                        },
+                    ],
+                },
+                {
+                    name: "Paper Writing",
+                    labels: [
+                        {
+                            name: "Abstract",
+                            segments: [
+                                {
+                                    start: new Date(2021, 6, 1),
+                                    end: new Date(2021, 6, 4),
+                                    val: "Review",
+                                }
+                            ],
+                        },    
+                        {
+                            name: "Introduction",
+                            segments: [
+                                {
+                                    start: new Date(2021, 6, 1),
+                                    end: new Date(2021, 6, 4),
+                                    val: "Review",
+                                }
+                            ],
+                        },
+                        {
+                            name: "Literature Review",
+                            segments: [
+                                {
+                                    start: new Date(2021, 6, 1),
+                                    end: new Date(2021, 7, 20),
+                                    val: "Review",
+                                }
+                            ],
+                        },
+                        {
+                            name: "Study1",
+                            segments: [
+                                {
+                                    start: new Date(2021, 6, 1),
+                                    end: new Date(2021, 6, 4),
+                                    val: "Draft",
+                                },
+                                {
+                                    start: new Date(2021, 6, 4),
+                                    end: new Date(2021, 6, 10),
+                                    val: "Draft Analysis",
+                                },
+                                {
+                                    start: new Date(2021, 6, 10),
+                                    end: new Date(2021, 6, 13),
+                                    val: "Review",
+                                }
+                            ],
+                        },
+                        {
+                            name: "Study2",
+                            segments: [
+                                {
+                                    start: new Date(2021, 6, 11),
+                                    end: new Date(2021, 6, 21),
+                                    val: "Draft",
+                                },
+                                {
+                                    start: new Date(2021, 6, 21),
+                                    end: new Date(2021, 6, 30),
+                                    val: "Draft Analysis",
+                                },
+                                {
+                                    start: new Date(2021, 6, 30),
+                                    end: new Date(2021, 7, 15),
+                                    val: "Review",
+                                }
+                            ],
+                        },
+                        {
+                            name: "Discussion",
+                            segments: [
+                                {
+                                    start: new Date(2021, 7, 1),
+                                    end: new Date(2021, 7, 15),
+                                    val: "Draft",
+                                },
+                                {
+                                    start: new Date(2021, 7, 20),
+                                    end: new Date(2021, 8, 4),
+                                    val: "Review",
+                                }
+                            ],
+                        },
+                        {
+                            name: "Conclusion",
+                            segments: [
+                                {
+                                    start: new Date(2021, 7, 1),
+                                    end: new Date(2021, 7, 15),
+                                    val: "Draft",
+                                },
+                                {
+                                    start: new Date(2021, 7, 20),
+                                    end: new Date(2021, 8, 4),
+                                    val: "Review",
+                                }
+                            ],
+                        },
+                        {
+                            name: "Final Revision",
+                            segments: [
+                                {
+                                    start: new Date(2021, 8, 4),
+                                    end: new Date(2021, 8, 8),
+                                    val: "Review",
+                                }
+                            ],
+                        },
+                    ],
+                }
+                
+            ];
+            
+            return [...Array(groups.length).keys()].map(i => ({
+                group: groups[i].name,
+                data: getGroupData(i)
+            }));
+
+
+            function getGroupData(groupID) {
+
+                return [...Array(groups[groupID].labels.length).keys()].map(i => ({
+                    label: groups[groupID].labels[i].name,
+                    data: getSegmentsData(groupID, i)
+                }));
+
+                function getSegmentsData(groupID, labelID) {
+                    const segments = groups[groupID].labels[labelID].segments;
+
+                    return [...Array(segments.length).keys()].map(i => {
+                        return {
+                            timeRange: [segments[i].start, segments[i].end],
+                            val: segments[i].val,
+                            //labelVal: is optional - only displayed in the labels
+                        };
+                    });
+
+                }
+            }
+        }
+
+
+
+    </script>
 </head>
+
 <body>
-    
+	<div id="myPlot"></div>
+
+	<script>
+		TimelinesChart()
+			.data(getData())
+			.zQualitative(true)
+			(document.getElementById('myPlot'));
+	</script>
 </body>
-</html>
+
+<!-- (1) user study design, (2) run a study, (3) data analysis and (4) paper writing -->
