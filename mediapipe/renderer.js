@@ -99,8 +99,8 @@ function runGraph(state, videoElem, canvasCtx, Module) {
                 console.log("n:", n, "state.graph.boundingBoxes", state.graph.boundingBoxes);
 
                 canvasCtx.strokeStyle = "purple";
-                canvasCtx.lineWidth = 3;
-                canvasCtx.globalAlpha = 0.4;
+                canvasCtx.lineWidth = 10;
+                canvasCtx.globalAlpha = 0.5;
 
                 for (let i = 0; i < n; i ++) {
                     console.log("i:", i);
@@ -111,7 +111,7 @@ function runGraph(state, videoElem, canvasCtx, Module) {
                     const y = bb.y * rawData.height;
                     canvasCtx.strokeRect(x, y, w, h);
 
-                    console.log("x:", x, "y:", y, "w:", w, "h:", h);
+                    console.log("box x:", x, "y:", y, "w:", w, "h:", h);
                 }
             },
             width: 640,
