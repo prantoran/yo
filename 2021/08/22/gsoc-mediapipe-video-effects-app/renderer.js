@@ -292,9 +292,10 @@ window.onload = function () {
         }
     }
 
+    console.log("document.getElementById(demoContent).style.display:", document.getElementById("demoContent").style.display);
     document.getElementById("btnDemo").onclick = function(event) {
         if (document.getElementById("demoContent").style.display == "none") {
-            document.getElementById("demoContent").style.display = "block";
+            document.getElementById("demoContent").style.display = "";
         } else {
             document.getElementById("demoContent").style.display = "none";
         }
