@@ -35,23 +35,37 @@
   <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js" crossorigin="anonymous"></script>
 
 
-
-  <script type="module">
-
-    // Find the latest version by visiting https://cdn.skypack.dev/three.
-
-    import * as THREE from 'https://cdn.skypack.dev/three@v0.131.3';
-
-    const scene = new THREE.Scene();
-
-  </script>
   <title>GSOC MediaPipe: Video Effects WebApp</title>
 </head>
 
 <body>
-  <div class="toolbar" role="banner">
-    <span>GSOC 2021 MediaPipe: Video Effects Web App</span>
-    <div class="spacer"></div>
+  <div class="toolbar">
+    <span>
+      <a href="https://summerofcode.withgoogle.com/projects/#4652144860332032">MediaPipe GSOC 2021: Video Effects Web
+        App</a>
+    </span>
+
+    <ul>
+      <li>
+        <a href="#describe_work_briefly">Work Summary</a>
+      </li>
+      <li>
+        <a href="#what_is_done">What is done</a>
+      </li>
+      <li>
+        <a href="#todo">Todo</a>
+      </li>
+      <li>
+        <a href="#get_the_code">Get The Code</a>
+      </li>
+      <li>
+        <a href="#demo">Demo</a>
+      </li>
+
+    </ul>
+
+    <!-- <div class="spacer"></div> -->
+
   </div>
   <div class="content" role="main">
   </div>
@@ -59,90 +73,285 @@
 
   <div class="row">
     <div class="col-md-3">
+      <div class="row">
+        <div class="col-md-6" style="text-align: right;">Instructors:</div>
+        <div class="col-md-6" style="text-align: left;">
+          <span>Tyler Mullen</span>
+          <br>
+          <span>Michael Hays</span>
+        </div>
+
+      </div>
+      <div class="row">
+        <div class="col-md-6" style="text-align: right;">Student:</div>
+        <div class="col-md-6" style="text-align: left;">Pinku Deb Nath</div>
+
+      </div>
+
     </div>
 
     <div class="col-md-9">
-      <h5>Describe my work briefly</h5>
-      <!-- <div class="card-container"> -->
+      <div class="row" id="describe_work_briefly">
+        <div class="col-sm-2">
+          <h5>Work Summary</h5>
+          <!-- <div class="card-container"> -->
 
+        </div>
 
-      <ul>
-        <li>
-          Setup C++ to Web Assembly compilation in the Mediapipe Bazel build pipeline.
-        </li>
-        <li>
-          Create WASM binaries of frequently used Mediapipe examples.
-        </li>
-        <li>Create a demo website to demonstrate the examples compiled to Web Assembly.</li>
+        <div class="col-sm-10">
+          <ul>
+            <li>
+              Setup C++ to Web Assembly compilation in the Mediapipe Bazel build pipeline.
+            </li>
+            <li>
+              Create WASM binaries of frequently used Mediapipe examples.
+            </li>
+            <li>Create a demo website to demonstrate the examples compiled to Web Assembly.</li>
+            <li>The internship addresses an <a href="https://github.com/google/mediapipe/issues/877">Github issue</a> created in the MediaPipe repository that is sought after by many users</li>
+          </ul>
 
-      </ul>
+        </div>
+      </div>
+      <hr>
       <!-- </div> -->
 
       <!-- <div class="card highlight-card card-small"> -->
-      <h5>What is done</h5>
-      <!-- <div class="card-container"> -->
+      <div class="row" id="what_is_done">
+        <div class="col-sm-2">
+          <h5>What is done</h5>
+        </div>
+        <!-- <div class="card-container"> -->
+        <div class="col-sm-10">
 
-      <ul>
-        <li>
-          Setup C++ to Web Assembly compilation in the Mediapipe Bazel build pipeline.
           <ul>
             <li>
-              Completed subtasks:
+              Setup C++ to Web Assembly compilation in the Mediapipe Bazel build pipeline.
+
               <ul>
-                <li>Setup conditional imports and code stubs in the dependencies.</li>
+                <li>Setup conditional imports and code stubs in the dependencies for porting calculators and modules
+                  to WASM.
+                  <ul>
+                    <li>modules components
+                      <ul>
+                        <li>face_detection:face_detection_short_range_gpu</li>
+                        <li>selfie_segmentation:selfie_segmentation_gpu</li>
+                        <li>face_landmark:face_landmark_front_gpu</li>
+                      </ul>
+                    </li>
+
+                    <li>graphs
+                      <ul>
+                        <li>face_mesh/subgraphs:face_renderer_gpu</li>
+                        <li>selfie_segmentation:selfie_segmentation_gpu_deps</li>
+                      </ul>
+                    </li>
+
+
+                    <li>gpu components
+                      <ul>
+                        <li>gpu_buffer</li>
+                        <li>gpu_shared_data_internal</li>
+                        <li>gl_calculator_helper</li>
+                        <li>image_frame_to_gpu_buffer_calculator</li>
+                        <li>gl_simple_calculator</li>
+                        <li>gl_simple_shaders</li>
+                      </ul>
+                    </li>
+
+                    <li>framework components
+                      <ul>
+                        <li>calculator_graph</li>
+                        <li>calculator_framework</li>
+                        <li>port
+                          <ul>
+                            <li>logging</li>
+                            <li>parse_text_proto</li>
+                            <li>status</li>
+                          </ul>
+                        </li>
+                        <li>formats
+                          <ul>
+                            <li>image_frame</li>
+                            <li>detection_cc_proto</li>
+                            <li>location_data_cc_proto</li>
+                            <li>landmark_cc_proto</li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+
+                    <li>calculators
+                      <ul>
+                        <li>core
+                          <ul>
+                            <li>pass_through_calculator</li>
+                            <li>constant_side_packet_calculator</li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+
+
+
+                  </ul>
+                </li>
+
                 <li>Create an WASM interface through which C++ functionalities can be accessed using Javascript.</li>
 
               </ul>
             </li>
+            <li>
+              Create WASM binaries of frequently used Mediapipe examples.
+
+              <ul>
+                <li>
+                  I have done so far:
+                  <ul>
+                    <li>Face Detection</li>
+                    <li>Selfie Detection</li>
+                    <li>Face Mesh</li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li>Create a demo website to demonstrate the examples compiled to Web Assembly.
+              <ul>
+                <li>
+                  Host a static site that runs WASM binaries in the browser and accessible with a domain name.
+                </li>
+              </ul>
+
+            </li>
+
           </ul>
-        </li>
-        <li>
-          Create WASM binaries of frequently used Mediapipe examples.
+        </div>
+      </div>
+
+      <hr>
+      <div class="row" id="todo">
+        <div class="col-sm-2">
+          <h5>Todo</h5>
+        </div>
+        <div class="col-sm-10">
 
           <ul>
-            <li>
-              I have done so far:
+            <li>Mediapipe Components that are not ported yet:
               <ul>
-                <li>Face Detection</li>
-                <li>Selfie Detection</li>
-                <li>Face Mesh</li>
+                <li>OpenCV components
+                  <ul>
+                    <li>third_party:opencv</li>
+                    <li>calculators
+                      <ul>
+                        <li>tensor:image_to_tensor_converter_opencv</li>
+                        <li>video
+                          <ul>
+                            <li>opencv_video_decoder_calculator</li>
+                            <li>opencv_video_encoder_calculator</li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                    <li>framework
+                      <ul>
+                        <li>formats
+                          <ul>
+                            <li>image_frame_opencv</li>
+                            <li>image_opencv</li>
+                          </ul>
+                        </li>
+                        <li>port
+                          <ul>
+                            <li>opencv_core</li>
+                            <li>opencv_imgproc</li>
+                            <li>opencv_highgui</li>
+                            <li>opencv_video</li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+
+                <li>Components that depend on OpenCV
+                  <ul>
+                    <li>calculators/util:annotation_overlay_calculator</li>
+                    <li>util:annotation_renderer (used by annotation_overlay_calculator)</li>
+                  </ul>
+                </li>
+
+                <li>Older modules with newer alternatives
+                  <ul>
+                    <li>calculators/tflite:tflite_inference_calculator (equilavent version in tensor module is latest)
+                    </li>
+                  </ul>
+                </li>
+                <li>Android dependencies</li>
+                <li>iOS dependencies</li>
+              </ul>
+            </li>
+            <li>Additional features and improvements
+              <ul>
+                <li>Figure out how to draw face mesh efficiently using WebGL2 in the browser.</li>
+                <li>Use GPU Buffer at every step of the graph to avoid conversion time to Imageframe and back.</li>
+                <li>Break up the monolith WASM binary into component WASM binaries that can be loaded at runtime.</li>
+                <li>Configure the WASM binary to take graph config at runtime.</li>
               </ul>
             </li>
           </ul>
-        </li>
-        <li>Create a demo website to demonstrate the examples compiled to Web Assembly.</li>
+        </div>
 
-      </ul>
+      </div>
+      <hr>
 
-      <h5>TODO</h5>
-      <ul>
-        <li>Figure out how to draw face mesh efficiently using WebGL2 in the browser.</li>
-        <li>Use GPU Buffer at every step of the graph to avoid conversion time to Imageframe and back.</li>
-        <li>Break up the monolith WASM binary into component WASM binaries that can be loaded at runtime.</li>
-        <li>Configure the WASM binary to take graph config at runtim.</li>
-      </ul>
+      <div class="row" id="get_the_code">
+        <div class="col-sm-2">
+          <h5>Get the code:</h5>
+        </div>
+        <div class="col-sm-10">
 
-      <h5>Get the code:</h5>
-      <ul>
-        <li>I forked the MediaPipe main repository and experimented the WASM build.</li>
-        <ul>
-          <li>
-            https://github.com/prantoran/mediapipe/
-          </li>
-        </ul>
-      </ul>
+          <ul>
+            <li>I forked the MediaPipe main repository and experimented the WASM build.
+              <ul>
+                <li>
+                  <a href="https://github.com/prantoran/mediapipe/">GitHub Repo</a>
+                </li>
+              </ul>
+            </li>
+            <li>I made changes across the whole framework, so it is not ready yet to be merged with the main MediaPipe repository.
+              <ul>
+                <li>Code is under review</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
 
-      <button class="card card-small" id="btnDemo" tabindex="0">Demo</button>
-      <ul>
-        <li>https://prantoran.me/diapipe</li>
-        <li>You can also click on the <b>Demo</b> to see the demo below here. You will need access to a web cam.</li>
-      </ul>
+      </div>
+      <hr>
+
+
+
+      <div class="row" id="demo">
+        <div class="col-sm-2">
+          <button class="card card-small" id="btnDemo" tabindex="0">Demo</button>
+        </div>
+        <div class="col-sm-10">
+          <ul>
+            <li>https://prantoran.me/diapipe</li>
+            <li>You can also click on the <b>Demo</b> to see the demo below here. You will need access to a web cam.
+            </li>
+          </ul>
+
+        </div>
+
+      </div>
+
+
     </div>
   </div>
 
 
 
-  <div class="row" id = "demoContent" style="display: none;">
+  <div class="row" id="demoContent" style="display: none;">
 
     <div class="col-md-4">
       <div class="terminal">
