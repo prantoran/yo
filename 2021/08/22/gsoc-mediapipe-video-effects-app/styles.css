@@ -8,6 +8,15 @@ box-sizing: border-box;
 -moz-osx-font-smoothing: grayscale;
 }
 
+.sidebar{
+  color:grey;
+  position:fixed;
+  width: 20%;
+}
+
+.div{
+  margin-top: 10em;
+}
 
 
 .toolbar a {
@@ -21,6 +30,7 @@ box-sizing: border-box;
     text-decoration: none;
     font-size: 17px;
   }
+
   
 h1,
 h2,
@@ -77,7 +87,7 @@ height: 60px;
 display: flex;
 /* display: inline-block; */
 align-items: center;
-background-color: #0fc8e0;
+background-color: #0fc8e0dd;
 color: white;
 font-weight: 600;
 /* justify-content: flex-end; */
@@ -208,7 +218,9 @@ text-decoration: none;
 }
 
 a:hover {
-color: #125699;
+  color: #125699;
+  /* border-left: 0.005em solid whitesmoke; */
+  /* border-right: 0.005em solid whitesmoke; */
 }
 
 .terminal {
@@ -265,6 +277,13 @@ box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
 }
 
 footer {
+position: fixed;
+left: 0;
+bottom: 0;
+width: 22%;
+background-color: #0fc8e0aa;
+color: white;
+text-align: center;
 margin-top: 8px;
 display: flex;
 align-items: center;
