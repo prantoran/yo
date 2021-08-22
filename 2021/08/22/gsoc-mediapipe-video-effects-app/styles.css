@@ -8,6 +8,8 @@ box-sizing: border-box;
 -moz-osx-font-smoothing: grayscale;
 }
 
+
+
 .sidebar{
   color:grey;
   position:fixed;
