@@ -131,13 +131,13 @@
         <div class="col-sm-10">
           <ul>
             <li>
-              Setup C++ to Web Assembly compilation in the Mediapipe Bazel build pipeline.
+              Setup C++ to WebAssembly compilation in the MediaPipe Bazel build pipeline.
             </li>
             <li>
-              Create WASM binaries of frequently used Mediapipe examples.
+              Create WASM binaries of frequently used MediaPipe examples.
             </li>
-            <li>Create a demo website to demonstrate the examples compiled to Web Assembly.</li>
-            <li>The internship addresses an <a href="https://github.com/google/mediapipe/issues/877">Github issue</a> created in the MediaPipe repository that was inquired by many users</li>
+            <li>Create a demo website to demonstrate the examples compiled to WASM.</li>
+            <li>The internship addresses a <a href="https://github.com/google/mediapipe/issues/877">Github issue</a> created in the MediaPipe repository that was inquired by many users.</li>
           </ul>
 
         </div>
@@ -155,67 +155,67 @@
 
           <ul>
             <li>
-              Setup C++ to Web Assembly compilation in the Mediapipe Bazel build pipeline.
+              Setup C++ to <a href="https://webassembly.org/">WebAssembly</a> (WASM) compilation in the MediaPipe Bazel build pipeline.
 
               <ul>
                 <li>Setup conditional imports and code stubs in the dependencies for porting calculators and modules
                   to WASM.
                   <ul>
-                    <li>modules components
+                    <li>Modules components.
                       <ul>
-                        <li>face_detection:face_detection_short_range_gpu</li>
-                        <li>selfie_segmentation:selfie_segmentation_gpu</li>
-                        <li>face_landmark:face_landmark_front_gpu</li>
+                        <li>face_detection:face_detection_short_range_gpu.</li>
+                        <li>selfie_segmentation:selfie_segmentation_gpu.</li>
+                        <li>face_landmark:face_landmark_front_gpu.</li>
                       </ul>
                     </li>
 
-                    <li>graphs
+                    <li>Graphs.
                       <ul>
-                        <li>face_mesh/subgraphs:face_renderer_gpu</li>
-                        <li>selfie_segmentation:selfie_segmentation_gpu_deps</li>
+                        <li>face_mesh/subgraphs:face_renderer_gpu.</li>
+                        <li>selfie_segmentation:selfie_segmentation_gpu_deps.</li>
                       </ul>
                     </li>
 
 
-                    <li>gpu components
+                    <li>GPU components.
                       <ul>
-                        <li>gpu_buffer</li>
-                        <li>gpu_shared_data_internal</li>
-                        <li>gl_calculator_helper</li>
-                        <li>image_frame_to_gpu_buffer_calculator</li>
-                        <li>gl_simple_calculator</li>
-                        <li>gl_simple_shaders</li>
+                        <li>gpu_buffer.</li>
+                        <li>gpu_shared_data_internal.</li>
+                        <li>gl_calculator_helper.</li>
+                        <li>image_frame_to_gpu_buffer_calculator.</li>
+                        <li>gl_simple_calculator.</li>
+                        <li>gl_simple_shaders.</li>
                       </ul>
                     </li>
 
-                    <li>framework components
+                    <li>Framework components.
                       <ul>
-                        <li>calculator_graph</li>
-                        <li>calculator_framework</li>
-                        <li>port
+                        <li>calculator_graph.</li>
+                        <li>calculator_framework.</li>
+                        <li>port.
                           <ul>
-                            <li>logging</li>
-                            <li>parse_text_proto</li>
-                            <li>status</li>
+                            <li>logging.</li>
+                            <li>parse_text_proto.</li>
+                            <li>status.</li>
                           </ul>
                         </li>
-                        <li>formats
+                        <li>formats.
                           <ul>
-                            <li>image_frame</li>
-                            <li>detection_cc_proto</li>
-                            <li>location_data_cc_proto</li>
-                            <li>landmark_cc_proto</li>
+                            <li>image_frame.</li>
+                            <li>detection_cc_proto.</li>
+                            <li>location_data_cc_proto.</li>
+                            <li>landmark_cc_proto.</li>
                           </ul>
                         </li>
                       </ul>
                     </li>
 
-                    <li>calculators
+                    <li>Calculators.
                       <ul>
-                        <li>core
+                        <li>core.
                           <ul>
-                            <li>pass_through_calculator</li>
-                            <li>constant_side_packet_calculator</li>
+                            <li>pass_through_calculator.</li>
+                            <li>constant_side_packet_calculator.</li>
                           </ul>
                         </li>
                       </ul>
@@ -226,28 +226,28 @@
                   </ul>
                 </li>
 
-                <li>Create an WASM interface through which C++ functionalities can be accessed using Javascript.</li>
+                <li>Create a WASM interface through which C++ functionalities can be accessed using Javascript.</li>
 
               </ul>
             </li>
             <li>
-              Create WASM binaries of frequently used Mediapipe examples.
+              Create WASM binaries of frequently used MediaPipe examples.
 
               <ul>
                 <li>
                   I have done so far:
                   <ul>
-                    <li>Face Detection</li>
-                    <li>Selfie Detection</li>
-                    <li>Face Mesh</li>
+                    <li>Face Detection.</li>
+                    <li>Selfie Detection.</li>
+                    <li>Face Mesh.</li>
                   </ul>
                 </li>
               </ul>
             </li>
-            <li>Create a demo website to demonstrate the examples compiled to Web Assembly.
+            <li>Create a demo website to demonstrate the examples compiled to WASM.
               <ul>
                 <li>
-                  Host a static site that runs WASM binaries in the browser and accessible with a domain name.
+                  Host a static site that runs WASM binaries in the browser and is accessible with a domain name.
                 </li>
               </ul>
 
@@ -265,7 +265,7 @@
         <div class="col-sm-10">
 
           <ul>
-            <li>Mediapipe Components that are not ported yet:
+            <li>MediaPipe Components that are not ported yet:
               <ul>
                 <li>OpenCV components
                   <ul>
@@ -311,7 +311,7 @@
 
                 <li>Older modules with newer alternatives
                   <ul>
-                    <li>calculators/tflite:tflite_inference_calculator (equilavent version in tensor module is latest)
+                    <li>calculators/tflite:tflite_inference_calculator (equivalent version in tensor module is latest)
                     </li>
                   </ul>
                 </li>
@@ -340,14 +340,14 @@
         <div class="col-sm-10">
 
           <ul>
-            <li>I forked the MediaPipe main repository and experimented the WASM build.
+            <li>I forked the MediaPipe main repository and experimented with the WASM build.
               <ul>
                 <li>
-                  <a href="https://github.com/prantoran/mediapipe/">Link to the code repository</a>
+                  <a href="https://github.com/prantoran/mediapipe/">Link to the code repository.</a>
                 </li>
               </ul>
             </li>
-            <li>Code is under review</li>
+            <li>Code is under review.</li>
             <ul>
                 <li>I made changes across the whole framework, so it is not yet ready to be merged with the main repository.
               </ul>
@@ -367,8 +367,8 @@
         <!-- <div class = "col-sm-1"></div> -->
         <div class="col-sm-9">
           <ul>
-            <li><a href="https://prantoran.me/diapipe">Link to demo website</a></li>
-            <li>You can also click on the <b>Demo</b> to see the demo below here. You will need access to a web cam.
+            <li><a href="https://prantoran.me/diapipe">Link to demo website.</a></li>
+            <li>You can also click on the <b>Demo</b> to expand the demo below here. You will need access to a webcam.
             </li>
           </ul>
 
