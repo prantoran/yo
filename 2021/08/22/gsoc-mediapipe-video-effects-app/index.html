@@ -18,22 +18,6 @@
 
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 
-  <script type="text/javascript">
-
-    var Module = {
-      onRuntimeInitialized: function () {
-        console.log("initialized");
-      }
-    };
-
-
-
-  </script>
-
-  <script src="hello-world-simple.js"></script>
-
-  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js" crossorigin="anonymous"></script>
-
 
   <title>GSOC MediaPipe: Video Effects WebApp</title>
 </head>
@@ -93,7 +77,7 @@
             <br>
             <span>Michael Hays</span>
           </div>
-  
+
         </div>
         <div class="row">
           <div class="col-md-6" style="text-align: right;">
@@ -107,23 +91,23 @@
             Pinku Deb Nath
             <br>
             <a href="https://github.com/prantoran">
-            <img src="github.png" style="width: 1.5em; height: 1.5em;"></img>
+              <img src="github.png" style="width: 1.5em; height: 1.5em;"></img>
             </a>
             <!-- <a href="https://www.linkedin.com/in/prantoran/">
             <img src="linkedin.png" style="width: 1.5em; height: 1.5em;"></img>
             </a> -->
           </div>
-  
+
         </div>
-  
+
       </div>
-      
+
     </div>
 
     <div class="col-md-9">
       <div class="row">
         <div class="col-sm-2">
-          <h5 class = "secheading" id="work_summary">Work Summary</h5>
+          <h5 class="secheading" id="work_summary">Work Summary</h5>
           <!-- <div class="card-container"> -->
 
         </div>
@@ -137,7 +121,8 @@
               Create WASM binaries of frequently used MediaPipe examples.
             </li>
             <li>Create a demo website to demonstrate the examples compiled to WASM.</li>
-            <li>The internship addresses a <a href="https://github.com/google/mediapipe/issues/877">Github issue</a> created in the MediaPipe repository that was inquired by many users.</li>
+            <li>The internship addresses a <a href="https://github.com/google/mediapipe/issues/877">Github issue</a>
+              created in the MediaPipe repository that was inquired by many users.</li>
           </ul>
 
         </div>
@@ -148,14 +133,15 @@
       <!-- <div class="card highlight-card card-small"> -->
       <div class="row">
         <div class="col-sm-2">
-          <h5 class = "secheading" id="what_is_done">What is done</h5>
+          <h5 class="secheading" id="what_is_done">What is done</h5>
         </div>
         <!-- <div class="card-container"> -->
         <div class="col-sm-10">
 
           <ul>
             <li>
-              Setup C++ to <a href="https://webassembly.org/">WebAssembly</a> (WASM) compilation in the MediaPipe Bazel build pipeline.
+              Setup C++ to <a href="https://webassembly.org/">WebAssembly</a> (WASM) compilation in the MediaPipe Bazel
+              build pipeline.
 
               <ul>
                 <li>Setup conditional imports and code stubs in the dependencies for porting calculators and modules
@@ -260,7 +246,7 @@
       <hr>
       <div class="row">
         <div class="col-sm-2">
-          <h5 class = "secheading" id="todo">Todo</h5>
+          <h5 class="secheading" id="todo">Todo</h5>
         </div>
         <div class="col-sm-10">
 
@@ -335,7 +321,7 @@
 
       <div class="row">
         <div class="col-sm-2">
-          <h5 class = "secheading" id="get_the_code">Get the code:</h5>
+          <h5 class="secheading" id="get_the_code">Get the code:</h5>
         </div>
         <div class="col-sm-10">
 
@@ -349,8 +335,9 @@
             </li>
             <li>Code is under review.</li>
             <ul>
-                <li>I made changes across the whole framework, so it is not yet ready to be merged with the main repository.
-              </ul>
+              <li>I made changes across the whole framework, so it is not yet ready to be merged with the main
+                repository.
+            </ul>
             </li>
           </ul>
         </div>
@@ -358,112 +345,18 @@
       </div>
       <hr>
 
-
-
       <div class="row" id="demo">
         <div class="col-sm-2">
-          <button class="card card-small" id="btnDemo" tabindex="0" style="width: 6em;">Demo</button>
+          <h5 class="secheading" id="get_the_code">Demo</h5>
         </div>
         <!-- <div class = "col-sm-1"></div> -->
         <div class="col-sm-9">
           <ul>
             <li><a href="https://prantoran.me/diapipe">Link to demo website.</a></li>
-            <li>You can also click on the <b>Demo</b> to expand the demo below here. You will need access to a webcam.
-            </li>
           </ul>
-
         </div>
-
       </div>
-
-
     </div>
   </div>
-
-
-
-  <div class="row" id="demoContent" style="display: none;">
-
-    <div class="col-md-4">
-      <div class="terminal">
-        <canvas id="output_canvas" width="640" height="480"></canvas>
-        <canvas id="glCanvas" width="640" height="480" style="display: none;"></canvas>
-      </div>
-    </div>
-    <div class="col-md-4" id="video_container">
-      <div class="terminal">
-
-        <video id="input_video" autoplay="true" width="640px" height="480px"></video>
-        <canvas id="input_video_canvas" width="640px" height="480px" style="display: none;"></canvas>
-        <canvas id="mask_canvas" width="640px" height="480px" style="display: none;"></canvas>
-
-      </div>
-    </div>
-    <div class="col-md-4">
-      <div class="card-container">
-
-        <button class="card card-small" value="Run Graph" id="btnRunGraph" tabindex="0">Run</button>
-
-        <button class="card card-small" id="btnFaceMesh" tabindex="1">
-          <span>Show Face Mesh</span>
-        </button>
-
-        <button class="card card-small" id="btnFaceDetection" tabindex="1">
-          <span>Face Detection</span>
-        </button>
-
-        <button class="card card-small" id="btnSelfieSegmentation" tabindex="2">
-          <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-            <path d="M500 200h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
-          </svg>
-
-          <span>Selfie Segmentation</span>
-        </button>
-        <button class="card card-small" id="btnShowBackgroundSource" tabindex="1">
-          <span>Show Background Source</span>
-        </button>
-
-        <button class="card card-small" id="btnShowWebGL2Canvas" tabindex="1">
-          <span>Show WebGL2 Canvas</span>
-        </button>
-
-      </div>
-      <div class="card-container" id="selfie_segmentation_opts" style="display: none;">
-        <h4>Selfie Segmentation Options</h4>
-        <button class="card card-small" value="Set Background" id="btnSetBackground" tabindex="4">Set
-          Background Image</button>
-        <div id="background_input" style="display: none;">
-          <button class="card card-small"><label for="file" style="cursor: pointer;">Upload Image</label></button
-            class="card card-small">
-          <input type="file" accept="image/*" name="image" id="file" style="display: none;">
-          <img id="output" width="200" />
-        </div>
-
-
-        <button class="card card-small" value="Set Background" id="btnSetBackgroundColor" tabindex="4">Set
-          Background Color</button>
-        <div id="color_input" style="display: none;">
-
-          <label for="favcolor">Pick color:</label>
-          <input type="color" id="favcolor" name="favcolor" value="#ff0000"><br><br>
-        </div>
-
-      </div>
-
-    </div>
-  </div>
-
-  <!-- <footer>
-    <h5>footer</h5>
-    <a href="https://github.com/google/mediapipe" target="_blank" rel="noopener">
-      <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-        <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" fill="#1976d2" />
-        <path d="M0 0h24v24H0z" fill="none" />
-      </svg>
-    </a>
-  </footer> -->
 </body>
-
 </html>
-
-<script type="module" src="renderer.js"></script>
